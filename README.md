@@ -1,6 +1,6 @@
-# vuejs
+# vuejs-full-feature
 
-> A Vue.js project
+> Shopping cart VueJS
 
 ## Build Setup
 
