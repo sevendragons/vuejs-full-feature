@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import { routes } from './router/index';
-
 import Vuetify from 'vuetify';
+import VueResource from 'vue-resource'
+
+import { routes } from './router/index';
 
 Vue.use(Vuetify);
 Vue.use(VueRouter);
+Vue.use(VueResource );
 
 const router = new VueRouter({
     routes: routes,
@@ -53,6 +55,13 @@ Vue.filter('currency', function(value) {
 
 export const eventBus = new Vue();
 export const authService = { isLoggedIn: false };
+
+
+
+/*------- Fetch Http use vue-resource -------*/
+
+
+
 
 new Vue({
     el: '#app',

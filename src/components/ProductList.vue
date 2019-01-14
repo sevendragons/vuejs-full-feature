@@ -42,6 +42,9 @@
                 products: products
             };
         },
+        created() {
+          this.$http.get('http:localhost:3000/products')
+        },
         methods: {
             addProductToCart(product, quantity) {
                 eventBus.$emit('addItemToCart', {
@@ -71,7 +74,7 @@
     #products .item .number-in-stock.few { color: #E0A14F; }
     #products .item .number-in-stock.none { color: #C45E5E; }
     .card1{
-      width: 300px;
+      max-width: 300px;
       margin: 16px;
 
     }

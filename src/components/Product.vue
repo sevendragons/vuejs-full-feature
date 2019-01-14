@@ -1,6 +1,7 @@
 <template>
     <div>
-        <button class="btn btn-primary" @click="goBack">&laquo; Back</button>
+        <v-btn style="margin-left:0" dark @click="goBack"><v-icon dark>arrow_back_ios
+</v-icon> Back</v-btn>
 
         <h1>{{ product.name }}</h1>
 
@@ -10,7 +11,7 @@
                     :to="{ name: 'viewProduct', params: { productId: product.id } }"
                     tag="li"
                     active-class="active">
-                <a>Details</a>
+                <v-btn color="purple" dark style="margin-left:0"><a>Details</a></v-btn>
             </router-link>
 
             <router-link
@@ -18,14 +19,14 @@
                     :to="{ name: 'productReviews', params: { productId: product.id } }"
                     tag="li"
                     active-class="active">
-                <a>Reviews</a>
+                <v-btn color="purple" dark style="margin-left:0"><a>Review</a></v-btn>
             </router-link>
         </ul>
 
         <br>
         <router-view></router-view>
 
-        <div v-if="relatedProducts != null" id="related" style="margin: 500px 0 500px 0;">
+        <div v-if="relatedProducts != null" id="related" style="margin: 80px 0 16px 0;">
             <h2>Related Products</h2>
             <ul>
                 <li v-for="related in relatedProducts">
@@ -75,6 +76,7 @@
             },
             goBack() {
                 this.$router.go(-1);
+                // this.$router.push('/');
             }
         },
         computed: {
@@ -99,5 +101,5 @@
     }
 </script>
 <style>
-    
+
 </style>

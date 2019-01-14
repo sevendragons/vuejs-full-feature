@@ -23,6 +23,6 @@ export const routes = [
             isAuthRequired: true
         }
     },
-    { path: '/cart', component: Cart },
+    { path: '/cart', component: Cart, alias:'/shopping-cart' },  //both is ok /cart and /shopping-cart
     { path: '*', component: { template: '<h1>Page Not Found!</h1>' } }
 ];

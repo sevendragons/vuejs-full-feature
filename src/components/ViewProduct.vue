@@ -33,6 +33,7 @@
                 this.discount = this.getDiscount(this.product.price, this.$route.query.discount);
             }
         },
+
         beforeRouteUpdate(to, from, next) {
             this.discount = this.getDiscount(this.product.price, to.query.discount);
             this.product = this.getProduct(to.params.productId);

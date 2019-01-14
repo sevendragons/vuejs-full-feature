@@ -3,8 +3,8 @@
         <router-view name="discount"></router-view>
 
         <div class="container">
-            <nav class="navbar navbar-light flex flex-row">
-                <div class="container-fluid">
+            <nav class="navbar navbar-light flex flex-row" style="padding-left:0">
+                <div class="container-fluid" style="padding-left:0">
                     <div class="navbar-header">
                         <router-link to="/" exact class="navbar-brand"><strong>E-commerce Inc.</strong></router-link>
                     </div>
